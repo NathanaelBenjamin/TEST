@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        body, input, button{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #fff;
+        }
+
+        .container{
+            background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.88);
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading h2{
+            font-weight: 350;
+            font-size: 2.2rem;
+            justify-self: left;
+            color: #3498db;
+            position: relative;
+            top: 0px;
+            animation: heading 3s;
+        }
+
+        @keyframes heading {
+            0%{
+                top: -100px;
+                
+            }
+            
+            100%{
+                top: 0px;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: flex-start; */
+            width: 50%;
+            height: 100%;
+            padding: 4.5rem 0.4rem;
+            border-radius: 8px;
+            background: 0;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        }
+
+        form input{
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #fff;
+            max-width: 423px;
+            height: 40px;
+            border: 0;
+            border-radius: 5px;
+            font-size: 1rem;
+            padding: 0.9rem;
+            margin: 0.6rem;
+        }
+
+        input:focus{
+            border: 1.5px solid #3498db;
+        }
+
+        button{
+            max-width: 150px;
+            border: 0;
+            border-radius: 25px;
+            outline: 0;
+            background-color: #3498db;
+            padding: 0.8rem 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 250;
+            margin: 0.7rem 0.6rem;
+        }
+
+        button:hover{
+            transform: scale(1.05);
+            transition: transform ease-in 0.3s;
+        }
+
+        form input::placeholder{
+            color: #272424;
+        }
+
+        blockquote a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        blockquote a:hover{
+            color: #3498db;
+        }
+
+        @media (max-width: 360px){
+            form{
+                display: grid;
+                place-content: center;
+            }
+
+            form input{
+                border: 0;
+                border-bottom: 1px solid #fff;
+                background-color: transparent;
+                color: #fff;
+                border-radius: 0;
+            }
+
+            form input::placeholder{
+                color: #fff;
+            }
+            
+            button{
+                padding: 0.5rem 0.2rem;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <form>
+            <div class="heading">
+                <h2>Sign up!</h2>
+            </div>
+
+            <div class="names">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+            </div>
+            <input type="email" name="email address" id="" placeholder="Email address">
+            <input type="number" name="mobile number" id="" placeholder="Mobile number">
+            <button>Sign up</button>
+
+            <blockquote>Already have an account? <a href='#'>Log in.</a></blockquote>
+        </form>
+    </div>
+
+
+    <script>
+        document.querySelector("button").addEventListener('click', (event) => {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
